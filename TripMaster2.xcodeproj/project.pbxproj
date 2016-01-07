@@ -16,6 +16,9 @@
 		8873BB371C31AF1600D17C05 /* TravellersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8873BB361C31AF1600D17C05 /* TravellersTableViewController.m */; };
 		8873BB421C31AF5C00D17C05 /* Traveller+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8873BB3D1C31AF5C00D17C05 /* Traveller+CoreDataProperties.m */; };
 		8873BB431C31AF5C00D17C05 /* Traveller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8873BB3F1C31AF5C00D17C05 /* Traveller.m */; };
+		88AB032F1C3EBA7900586575 /* VacationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AB032E1C3EBA7900586575 /* VacationsTableViewController.m */; };
+		88AB03341C3EBAAC00586575 /* Vacation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AB03311C3EBAAC00586575 /* Vacation+CoreDataProperties.m */; };
+		88AB03351C3EBAAC00586575 /* Vacation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AB03331C3EBAAC00586575 /* Vacation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,12 @@
 		8873BB3D1C31AF5C00D17C05 /* Traveller+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Traveller+CoreDataProperties.m"; sourceTree = "<group>"; };
 		8873BB3E1C31AF5C00D17C05 /* Traveller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Traveller.h; sourceTree = "<group>"; };
 		8873BB3F1C31AF5C00D17C05 /* Traveller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Traveller.m; sourceTree = "<group>"; };
+		88AB032D1C3EBA7900586575 /* VacationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VacationsTableViewController.h; sourceTree = "<group>"; };
+		88AB032E1C3EBA7900586575 /* VacationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VacationsTableViewController.m; sourceTree = "<group>"; };
+		88AB03301C3EBAAC00586575 /* Vacation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vacation+CoreDataProperties.h"; sourceTree = "<group>"; };
+		88AB03311C3EBAAC00586575 /* Vacation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Vacation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		88AB03321C3EBAAC00586575 /* Vacation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vacation.h; sourceTree = "<group>"; };
+		88AB03331C3EBAAC00586575 /* Vacation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vacation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,10 @@
 		8873BB0F1C31A46F00D17C05 = {
 			isa = PBXGroup;
 			children = (
+				88AB03301C3EBAAC00586575 /* Vacation+CoreDataProperties.h */,
+				88AB03311C3EBAAC00586575 /* Vacation+CoreDataProperties.m */,
+				88AB03321C3EBAAC00586575 /* Vacation.h */,
+				88AB03331C3EBAAC00586575 /* Vacation.m */,
 				8873BB3C1C31AF5C00D17C05 /* Traveller+CoreDataProperties.h */,
 				8873BB3D1C31AF5C00D17C05 /* Traveller+CoreDataProperties.m */,
 				8873BB3E1C31AF5C00D17C05 /* Traveller.h */,
@@ -75,6 +88,8 @@
 				8873BB241C31A46F00D17C05 /* Main.storyboard */,
 				8873BB351C31AF1600D17C05 /* TravellersTableViewController.h */,
 				8873BB361C31AF1600D17C05 /* TravellersTableViewController.m */,
+				88AB032D1C3EBA7900586575 /* VacationsTableViewController.h */,
+				88AB032E1C3EBA7900586575 /* VacationsTableViewController.m */,
 				8873BB2A1C31A46F00D17C05 /* Assets.xcassets */,
 				8873BB2C1C31A46F00D17C05 /* LaunchScreen.storyboard */,
 				8873BB2F1C31A46F00D17C05 /* Info.plist */,
@@ -162,11 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AB03341C3EBAAC00586575 /* Vacation+CoreDataProperties.m in Sources */,
 				8873BB291C31A46F00D17C05 /* TripMaster2.xcdatamodeld in Sources */,
 				8873BB371C31AF1600D17C05 /* TravellersTableViewController.m in Sources */,
 				8873BB201C31A46F00D17C05 /* AppDelegate.m in Sources */,
+				88AB03351C3EBAAC00586575 /* Vacation.m in Sources */,
 				8873BB421C31AF5C00D17C05 /* Traveller+CoreDataProperties.m in Sources */,
 				8873BB1D1C31A46F00D17C05 /* main.m in Sources */,
+				88AB032F1C3EBA7900586575 /* VacationsTableViewController.m in Sources */,
 				8873BB431C31AF5C00D17C05 /* Traveller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +334,7 @@
 				8873BB341C31A46F00D17C05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

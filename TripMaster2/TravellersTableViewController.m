@@ -13,7 +13,6 @@
 @interface TravellersTableViewController () <UITextFieldDelegate>
 
 @property NSManagedObjectContext *moc;
-
 @property NSArray *travellers;
 
 @end
