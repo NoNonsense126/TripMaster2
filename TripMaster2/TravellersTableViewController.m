@@ -9,11 +9,14 @@
 #import "AppDelegate.h"
 #import "TravellersTableViewController.h"
 #import "Traveller.h"
+#import "Vacation.h"
+//@class Traveller;
 
 @interface TravellersTableViewController () <UITextFieldDelegate>
 
 @property NSManagedObjectContext *moc;
 @property NSArray *travellers;
+@property NSArray *vacations;
 
 @end
 
@@ -29,9 +32,26 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    [self loadVacations];
+    
     [self loadTravellers:@0];
 }
 
+- (void)loadVacations {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Vacation"];
+    NSSortDescriptor *sortByName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    request.sortDescriptors = @[sortByName];
+    
+    NSError *error;
+    
+    self.vacations = [self.moc executeFetchRequest:request error:&error];
+    
+    if (error == nil) {
+        [self.tableView reloadData];
+    } else {
+        NSLog(@"AN ERROR OCCURRED : %@", error);
+    }
+}
 
 - (void)loadTravellers:(NSNumber *)withAge {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Traveller"];
@@ -60,6 +80,8 @@
     traveller.name = textField.text;
     traveller.age = [NSNumber numberWithInt:arc4random_uniform(100)];
     traveller.budget = [NSNumber numberWithInt:100 + arc4random_uniform(400)];
+    
+    traveller.destination = [self.vacations objectAtIndex:arc4random_uniform((int)self.vacations.count)];
 
     NSError *error;
 
@@ -87,7 +109,7 @@
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@", traveller.name];
     cell.detailTextLabel.numberOfLines = 0;
-
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"age: %@\nbudget: $%@\nvacations: %@", traveller.age, traveller.budget, traveller.destination.name];
 
     return cell;
 }

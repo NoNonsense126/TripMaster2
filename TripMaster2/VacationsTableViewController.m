@@ -82,6 +82,9 @@
     Vacation *vacation = self.vacations[indexPath.row];
     cell.textLabel.text = vacation.name;
 
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"travellers: %li", vacation.travellers.count];
+    
+    
     return cell;
 }
 
